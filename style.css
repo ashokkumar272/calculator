@@ -3,16 +3,27 @@
     margin: 0;
     font-size: x-large;
 }
+.exp{
+    position: absolute;
+    padding: 10px;
+    bottom: 0px;
+    right: 0px;
+}
+.answer{
+    background-color: red;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
 .container{
     display: flex;
     flex-direction: column;
-    width: 350px;
-    height: 99vh;
+    width: 300px;
+    height: 100vh;
     border: 1px solid black;
     margin: auto;
     border-radius: 10px;
     background-color: rgb(102, 102, 102);
-    gap: 50px;
 }
 #display{
     height: 35%;
@@ -20,8 +31,9 @@
     border-radius: 10px;
     margin: 10px;
     background-color: aqua;
-    /* text-align: end; */
     text-align:  right;
+    position: relative;
+    padding: 10px;
     
 }
 #btn-container{

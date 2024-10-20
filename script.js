@@ -1,5 +1,9 @@
 const display = document.getElementById('display');
 const buttons = document.querySelectorAll('.btn');
+const newele1 = document.createElement('div');
+newele1.className = 'exp';
+const newele2 = document.createElement('div');
+newele2.className = 'answer';
 
 
 
@@ -16,7 +20,7 @@ function handleInput(value){
         calculateResult();
     }
     else if(value === "ac"){
-        display.innerText = '';
+        newele1.innerText = '';
     }
     else if(value === "<"){
         back();
@@ -28,14 +32,16 @@ function handleInput(value){
 }
 
 function updateDisplay(value){
-    display.innerText += value;
+    newele1.innerText += value;
+    display.appendChild(newele1);
 }
 
 function calculateResult() {
     try {
-      display.innerText = eval(display.innerText);
+      newele1.innerText += "\n = " + eval(newele1.innerText);
+    //   display.appendChild(newele2);
     } catch (error) {
-      display.innerText = "Error";
+        newele1.innerText = "Error";
     }
   }
 
